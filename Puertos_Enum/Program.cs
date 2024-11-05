@@ -33,9 +33,10 @@ namespace Puertos_Enum
 
         static void Main(string[] args)
         {
-            bool condicion = true;
+            bool condicion;
             do
             {
+                condicion = false;
                 Console.WriteLine("Ingresa el numero de puerto que deseas activar");
                 int puerto = Convert.ToInt32(Console.ReadLine());
 
@@ -43,50 +44,40 @@ namespace Puertos_Enum
                 {
                     case Socket.puerto1:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Expresion Regular");
-                        condicion = false;
                         break;
                     case Socket.puerto2:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Calculadora");
-                        condicion = false;
                         break;
                     case Socket.puerto3:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Base de datos");
-                        condicion = false;
                         break;
                     case Socket.puerto4:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     case Socket.puerto5:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     case Socket.puerto6:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     case Socket.puerto7:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     case Socket.puerto8:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     case Socket.puerto9:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     case Socket.puerto10:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     case Socket.puerto11:
                         Console.WriteLine("Configurado el puerto " + puerto + ", Nombre aun no definido");
-                        condicion = false;
                         break;
                     default:
                         Console.WriteLine("No existe el puerto " + puerto);
+                        condicion = true;
                         break;
                 }
 
